@@ -1,8 +1,14 @@
 "use strict";
-//Declaração de variaveis com asignação de valores
-let carroSemImposto = 1000;
-let impostoDeFabrica = carroSemImposto * (28 / 100);
-let carroComImpostoDeFabrica = carroSemImposto + impostoDeFabrica;
-let impostosGerais = carroComImpostoDeFabrica * (45 / 100);
-let carroCostoParaVenda = carroComImpostoDeFabrica + impostosGerais;
-console.log(carroCostoParaVenda);
+document.addEventListener('DOMContentLoaded', () => {
+    let button = document.getElementById('enviar');
+    button.addEventListener('click', valorFinal);
+    function valorFinal() {
+        //Declaração de variaveis com asignação de valores
+        let carroSemImposto = document.getElementById('precoCarro').value;
+        let impostoDeFabrica = Number(carroSemImposto) * (28 / 100);
+        let carroComImpostoDeFabrica = Number(carroSemImposto) + impostoDeFabrica;
+        let impostosGerais = carroComImpostoDeFabrica * (45 / 100);
+        let carroCostoParaVenda = carroComImpostoDeFabrica + impostosGerais;
+        alert(carroCostoParaVenda.toFixed(2));
+    }
+});

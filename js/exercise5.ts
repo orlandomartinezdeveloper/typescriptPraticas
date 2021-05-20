@@ -10,6 +10,5 @@ numerosParaProbar.forEach(numero => {
     if (numeroPrimo(numero) == true) {
         console.log(numero);
     }
-
 });
 
