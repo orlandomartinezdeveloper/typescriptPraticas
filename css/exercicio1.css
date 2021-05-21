@@ -4,7 +4,11 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+
+
 .container-fluid {
+    overflow: hidden;
+    position:absolute;
     height: 100vh;
     width: 100%;
     background: url(../img/pexels-jae-park-3770875.jpg);
@@ -26,3 +30,47 @@ h2 {
     font-size: 1rem;
     text-align: center;
 }
+
+.carro {
+    position:absolute;
+    top: 50%;
+    left: -500px;
+    animation-name: carrito;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.van {
+    width:200px;
+}
+.caucho {
+    margin-top: -88px;
+    margin-left: 23px;
+}
+
+.caucho2 {
+    margin-top: -25px;
+    margin-left: 152px;
+}
+.ring {
+    width:19px;
+    animation-name: caucho;
+    animation-iteration-count: infinite;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+}
+
+@keyframes carrito {
+    from {left: -300px}
+    to {left: 1950px}
+}
+
+@keyframes caucho {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+
+
+
