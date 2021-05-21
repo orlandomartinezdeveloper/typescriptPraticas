@@ -24,6 +24,7 @@
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
+    z-index: 10000;
 }
 
 h2 {
